@@ -1,0 +1,29 @@
+<div>
+    <form>
+        <mat-label>Name: </mat-label>
+        <input name="name" type="text" [(ngModel)]="name">
+
+        <mat-label>Role: </mat-label>
+        <input name="role" type="text" [(ngModel)]="role">
+    </form>
+
+    <button mat-raised-button (click)="createUser()">Create User</button>
+</div>
+
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Role</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.role}}</td>
+        </tr>
+    </tbody>
+
+
+</table>
